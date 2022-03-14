@@ -13,7 +13,6 @@ variable "bastions" {
     defined_tags                  = map(string),
     freeform_tags                 = map(string),
     max_session_ttl_in_seconds    = string,
-    name                          = string,
     phone_book_entry              = string,
     static_jump_host_ip_addresses = string
   }))

@@ -28,7 +28,7 @@ resource "oci_bastion_bastion" "this" {
   defined_tags                  = each.value.defined_tags != null ? each.value.defined_tags : local.defined_tags
   freeform_tags                 = each.value.freeform_tags != null ? each.value.freeform_tags : local.freeform_tags
   max_session_ttl_in_seconds    = var.bastion_max_session_ttl_in_seconds
-  name                          = each.value.name != null ? each.value.name : local.name
+  name                          = each.key != null ? each.key : local.name
   phone_book_entry              = each.value.phone_book_entry != null ? each.value.phone_book_entry : local.phone_book_entry
   static_jump_host_ip_addresses = each.value.static_jump_host_ip_addresses != null ? each.value.static_jump_host_ip_addresses : local.static_jump_host_ip_addresses
 }
