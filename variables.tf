@@ -14,7 +14,7 @@ variable "bastions" {
     freeform_tags                 = map(string),
     max_session_ttl_in_seconds    = string,
     phone_book_entry              = string,
-    static_jump_host_ip_addresses = string
+    static_jump_host_ip_addresses = list(string)
   }))
 
   description = "Parameters for each bastion to be created/managed."
